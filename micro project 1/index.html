@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap" rel="stylesheet">
+
+    <title>Dappr</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        nav{
+            position :flex;
+            background-color: #6f6af7;
+            width: 100%;
+            height: 80px;
+            z-index: 10;
+        }
+        nav h1{
+            position: absolute;
+            font-weight: 700;
+            top: 17px;
+            left: 44px;
+            font-size: 40px;
+            color: white;
+            font-family: 'Delius Unicase', cursive;
+        }
+        
+            
+            
+        ::placeholder{
+            position: absolute;
+            left: 15px;
+        }
+        li{
+            position: relative;
+            color: white;
+            display: flex;
+            height: 33px;
+            width: 202px;
+            left: 212px;
+            top :27px;
+            float: left;
+            text-align: center;
+            font-size: 26.43px;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-weight: 400;
+        }
+        
+        nav input{
+            position: relative;
+            width: 214px;
+            height: 37px;
+            top: 27px;
+            left: 200px;
+            border-radius: 63px;
+            border: none;
+        }
+
+        nav .lines{
+            position: absolute;
+            right:30px;
+            top:22px;
+            height: 40px;
+            width: 57px;
+        }
+        nav .search{
+            position: absolute;
+            top:35px;
+            left:1225px;
+            height: 20px;
+            width: 20px;
+        }
+
+        .cont1 img{
+            position : relative;
+            width: 256px;
+            height: 339px;
+            top: 110px;
+            left: 199px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+            
+        }
+        .cont1 .textbox{
+            position: absolute;
+            width: 672px;
+            height: 339px;
+            top:189px;
+            left:490px;
+            border-radius: 16px;
+            background-color: #E5D8FF;
+        }
+        .textbox p{
+            position: absolute;
+            top:20px;
+            left: 20px;
+            font-family: 'Poppins', cursive;
+            color: #6f7373;
+        }
+
+        .seg1{
+
+            position: absolute;
+            background-color: #929dff;
+            width: 237px;
+            height: 100px;
+            top : 580px;
+            border-radius: 11px;
+            left:180px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .seg2{
+
+            position: absolute;
+            background-color: #734cf2;
+            width: 237px;
+            height: 100px;
+            top : 580px;
+            border-radius: 11px;
+            left:450px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            }
+
+        .seg3{
+
+            position: absolute;
+            background-color: #d288ff;
+            width: 237px;
+            height: 100px;
+            top : 580px;
+            border-radius: 11px;
+            left:720px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            }
+
+        .seg4{
+
+        position: absolute;
+        background-color: black;
+        width: 237px;
+        height: 100px;
+        top : 580px;
+        border-radius: 11px;
+        left:990px;
+
+        }
+
+        #paratext {
+            color: white;
+            font-family: 'Poppins', cursive;
+            position: absolute;
+            text-align: center;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+        }
+        .chatbot img{
+            position:fixed;
+            bottom: 1px;
+            right: 90px;
+            height: 150px;
+            width: 150px;
+
+        }
+        .cont2{
+            display: flex;
+            position: absolute;
+            width: 1045px;
+            height: 415px;
+            left: 180px;
+            top: 900px;
+            background-color: #483eff;
+            
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+        }
+        .emt{
+            position: absolute;
+            top:1000px;
+            height: 400px;
+            width: 100px;
+            color: #d288ff;
+        }
+        .cont2 .box1{
+            position: absolute;
+            z-index: 1;
+            width: 237px;
+            height: 80px;
+            background-color: #BCE0F6;
+            top: 30px;
+            left: 30px;
+            border-radius: 20px;
+
+        }
+        .cont2 .box2{
+            position: absolute;
+            z-index: 1;
+            width: 237px;
+            height: 80px;
+            background-color: #483eff;
+            top: 150px;
+            left: 30px;
+            border-radius: 20px;
+            border: 3px white solid;
+
+        }
+        .cont2 .box3{
+            position: absolute;
+            z-index: 1;
+            width: 237px;
+            height: 80px;
+            background-color: #483eff;
+            top: 270px;
+            left: 30px;
+            border-radius: 20px;
+            border: 3px white solid;
+
+        }
+        .cont2  #text2{
+            position: absolute;
+            
+            
+            top: 25px;
+            left: 60px;
+            font-family: 'Montserrat', 'Poppins', 'Arial', sans-serif;
+            font-weight: bold;
+            color: white; /* Text color */
+            
+            font-size: 20px; /* Adjust size as needed */
+            letter-spacing: 2px; /* Adds space between the letters */
+            text-transform: uppercase;
+
+        }
+        .cont2 .info{
+            position: absolute;
+            height: 375px;
+            width: 720px;
+            background-color: white;
+            top: 20px;
+            left: 305px;
+            border-radius: 15px;
+
+        }
+        .cont2 .text{
+            position: absolute;
+            top: 30px;
+            left: 60px;
+        }
+        .cont2 .text p{
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-weight: 400;
+            color: #002D62; 
+            font-size: 16px; 
+            
+
+
+
+        }
+        .btn input{
+            position: absolute;
+            width: 120px;
+            height: 50px;
+            background-color: black;
+            border-radius: 10px;
+            bottom: 20px;
+            right: 30px;
+            color: white;
+            text-align: left;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        .btn img{
+            position: absolute;
+            top: 315px;
+            height: 30px;
+            width: 30px;
+            left: 640px;
+            
+        }
+        .icon{
+            position: absolute;
+            right: 10px;
+            top:250px;
+        }
+        
+        .img1{
+            position: sticky;
+            top: 100px;
+            width: 45px;
+            height: 45px;
+            border: 2px solid black;
+            right: 0px;
+            margin: 2px;
+            border-radius: 5px;
+        }
+        .img2{
+            position: sticky;
+            top: 150px;
+            width: 45px;
+            height: 45px;
+            border: 2px solid black;
+            right: 0px;
+            margin: 2px;
+            border-radius: 5px;
+        }
+        .img3{
+            position: sticky;
+            top: 200px;
+            width: 45px;
+            height: 45px;
+            border: 2px solid black;
+            right: 0px;
+            margin: 2px;
+            border-radius: 5px;
+        }
+        .icon img{
+            position: absolute;
+            height: 39px;
+            width: 39px;
+            top: 5px;
+            left: 3px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="main" >
+        <nav>
+            <h1>Dappr</h1>
+    
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Information</li>
+                <li>More</li>
+            </ul>
+            <input type="search" placeholder="Search..." name="" id="">
+            <img class="search" src="./images/search.png" alt="">
+    
+            <img class = "lines" src="./images/3 lines.png" alt="">
+        </nav>
+    
+        <div class = "cont1">
+            <img src="./images/code image.png" alt="">
+            <div class="textbox"><p>It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ......</p></div>
+        </div>
+    
+        
+        <div class="seg1"><p id ="paratext">Total Questions's <br> 200,000</p></div>
+        <div class="seg2"><p id ="paratext">Total Answer's<br>105,000</p></div>
+        <div class="seg3"><p id ="paratext">Participated <br>10,000</p></div>
+        <div class="seg4"><p id ="paratext">Total Passed <br> 6,000</p></div>
+        
+        <div class="chatbot">
+            <img src="./images/chat bot.png" alt="">
+        </div>
+    
+        <div class = "cont2">
+            <div class="box1" ><P id="text2" style="color: black;">YOUR INFO</P></div>
+            <div class="box2" ><P id="text2" style="color: white;">BOOKMARKS</P></div>
+            <div class="box3" ><P id="text2" style="color: white;"> SETTINGS</P></div>
+            <div class="info">
+                <div class="text">
+                    <h2 style="color: #04285A; font-family: 'Roboto', 'Arial',sans-serif;  font-size: 24px; letter-spacing: 3px; font-weight:bold;" >Your information</h2>
+                    <br>
+                    <p><b>Name  </b> : Ruthvik</p>
+                    <br>
+                    <p><b>Email </b>: nagaruthvik66@gmail.com</p>
+                    <br>
+                    <p><b>Phone </b>: +91 7416873746</p>
+                    <br>
+                    <p><b>Marks </b>: 500.00</p>
+    
+                </div>
+                <div class="btn"> 
+                    <input type="submit"  value="Next" >
+                    <img src="./images/icons8-arrow-30.png" alt="">
+                </div>            
+            </div>
+        </div>
+        
+        
+        <div style="height: 1100px;" class="icon">
+            <div class="img1"><img src="./images/whatsapp.png" alt=""></div>
+            <div class="img2"><img src="./images/facebook.png" alt=""></div>
+            <div class="img3"><img src="./images/twitter.png" alt=""></div>
+        </div> <!-- Extra content to enable scrolling -->
+
+        
+        
+        
+        
+       
+    </div>
+    
+    
+
+</body>
+</html>
